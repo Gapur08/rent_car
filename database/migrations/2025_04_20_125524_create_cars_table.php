@@ -13,6 +13,18 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
+//            $table->unsignedBigInteger('brand_id');
+//            $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
+//            $table->string('image')->nullable();
+//            $table->text('note')->nullable();
+//            $table->foreignId('brand_id')->constrained()->onDelete('cascade');
+//            $table->year('year');
+//            $table->decimal('price', 10, 2);
+//            $table->integer('seats');
+//            $table->string('status')->default('available');
+//            $table->foreignId('category_id')->constrained()->onDelete('cascade');
+//            $table->foreignId('color_id')->constrained()->onDelete('cascade');
+//            $table->foreignId('payment_id')->nullable()->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

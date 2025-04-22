@@ -8,8 +8,9 @@ class Car extends Model
 {
     use HasFactory;
 
+
     protected $fillable = [
-        'name', 'image', 'note', 'status', 'user_id', 'brand_id', 'year', 'seats', 'price', 'category_id', 'color_id', 'payment_id'
+        'name', 'image', 'note', 'brand_id', 'year', 'price', 'seats', 'status', 'category_id', 'color_id', 'payment_id'
     ];
 
     public function user()
@@ -41,5 +42,9 @@ class Car extends Model
     {
         return $this->hasMany(Payment::class);
     }
-    //
+
+    public function registrations()
+    {
+        return $this->hasMany(Registration::class);
+    }
 }
