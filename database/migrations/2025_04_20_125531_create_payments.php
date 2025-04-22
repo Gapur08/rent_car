@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
+            $table->boolean('cash')->default(false);
+            $table->boolean('credit')->default(false);
+            $table->boolean('online')->default(false);
             $table->timestamps();
         });
     }

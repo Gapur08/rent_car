@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
-//            $table->unsignedBigInteger('brand_id');
-//            $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
 //            $table->string('image')->nullable();
 //            $table->text('note')->nullable();
 //            $table->foreignId('brand_id')->constrained()->onDelete('cascade');
