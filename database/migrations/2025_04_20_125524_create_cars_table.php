@@ -13,16 +13,17 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
-//            $table->string('image')->nullable();
-//            $table->text('note')->nullable();
-//            $table->foreignId('brand_id')->constrained()->onDelete('cascade');
-//            $table->year('year');
-//            $table->decimal('price', 10, 2);
-//            $table->integer('seats');
-//            $table->string('status')->default('available');
-//            $table->foreignId('category_id')->constrained()->onDelete('cascade');
-//            $table->foreignId('color_id')->constrained()->onDelete('cascade');
-//            $table->foreignId('payment_id')->nullable()->constrained()->onDelete('cascade');
+            $table->string('image')->nullable();
+            $table->text('note')->nullable();
+            $table->unsignedBigInteger('brand_id');
+            $table->year('year');
+            $table->decimal('price', 10, 2);
+            $table->unsignedBigInteger('color_id');
+            $table->integer('seats');
+            $table->string('status')->default('available');
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('payment_id')->nullable();
+            $table->string('model');
             $table->timestamps();
         });
     }
