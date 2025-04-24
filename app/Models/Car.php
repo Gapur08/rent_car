@@ -10,7 +10,8 @@ class Car extends Model
 
 
     protected $fillable = [
-        'name', 'image', 'note', 'brand_id', 'year', 'price', 'seats', 'status', 'category_id', 'color_id', 'payment_id'
+        'name', 'image', 'note', 'brand_id', 'year', 'price', 'seats', 'status', 'category_id',
+        'color_id', 'payment_id'
     ];
 
     public function user()
